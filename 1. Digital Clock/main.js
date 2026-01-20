@@ -3,29 +3,29 @@ const minuteEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 const ampmEl = document.getElementById("ampm");
 
-function upadteClock(){
-    let h = new Date().getHours();
-    let m = new Date().getMinutes();
-    let s = new Date().getSeconds();
-    let ampm = "AM";
+function updateClock(){
+    const now = new Date();
 
-    if(h > 12){
-    h = h - 12;
-    ampm = "PM";
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+
+    let ampm;
+    
+    if(h >= 12){
+        ampm = "PM";
+    } else {
+        ampm = "AM";
     }
 
-    h = h < 10 ? "0" + h : h;
-    m = m < 10 ? "0" + m : m;
-    s = s < 10 ? "0" + s : s;
-    
+    h = h % 12 || 12;
 
-    hourEl.innerText = h;
-    minuteEl.innerText = m;
-    secondsEl.innerText = s;
-    ampmEl.innerText = ampm;
-    setTimeout(() => {
-        upadteClock();
-    }, 1000);
+    hourEl.innerText = String(h).padStart(2, "0");
+    minuteEl.innerText = String(m).padStart(2, "0");
+    secondsEl.innerText = String(s).padStart(2, "0");
+
+setTimeout(updateClock, 1000);
+
 }
 
-upadteClock();
+updateClock();
