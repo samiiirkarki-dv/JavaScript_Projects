@@ -1,11 +1,11 @@
-const num1 = Math.ceil(Math.random() * 10);
-const num2 = Math.ceil(Math.random() * 10);
-
 const questionEl = document.getElementById("question");
 const formEl = document.getElementById("form");
 const inputEl = document.getElementById("input");
 const scoreEl = document.getElementById("score");
 let score = JSON.parse(localStorage.getItem("score"));
+
+const num1 = Math.ceil(Math.random() * 10);
+const num2 = Math.ceil(Math.random() * 10);
 
 if (!score) {
   score = 0;
