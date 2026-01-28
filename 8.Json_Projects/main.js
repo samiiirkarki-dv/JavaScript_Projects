@@ -1,4 +1,4 @@
-
+// DOM ELEMENTS
 
 const studentForm = document.getElementById("studentForm");
 const studentContainer = document.querySelector(".students");
