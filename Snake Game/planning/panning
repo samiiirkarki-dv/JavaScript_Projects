@@ -1,0 +1,20 @@
+/* PLANNING MAP:
+  
+  [1] SETUP: 
+      - Select Canvas & Score text
+      - Define unitSize (25) and Velocities
+      - Init Snake Array (5 segments)
+
+  [2] ENGINE (The Heartbeat):
+      - gameStart() -> Resets variables -> nextTick()
+      - nextTick()  -> 75ms Loop: [Clear -> Move -> Check -> Draw]
+
+  [3] MOVEMENT LOGIC:
+      - changeDirection() -> Validates keypress (No 180-degree turns)
+      - moveSnake()       -> Adds Head. If !Food: Remove Tail.
+
+  [4] COORDINATE LOGIC:
+      - createFood() -> Math.random * (Width/unitSize) * unitSize
+      - checkGameOver() -> If (x < 0 || x > Width) OR (y < 0 || y > Height) 
+*/
+
