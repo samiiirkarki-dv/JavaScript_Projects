@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Random Color Generator</h1>
+    <div class="container">
+      <div class="color-container">#7652ae</div>
+      <div class="color-container">#7652ae</div>
+      <div class="color-container">#7652ae</div>
+      <div class="color-container">#7652ae</div>
+      <div class="color-container">#7652ae</div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+<!-- const containerEl = document.querySelector(".container");
+
+for (let index = 0; index < 30; index++) {
+  const colorContainerEl = document.createElement("div");
+  colorContainerEl.classList.add("color-container");
+  containerEl.appendChild(colorContainerEl);
+}
+
+const colorContainerEls = document.querySelectorAll(".color-container");
+
+generateColors();
+
+function generateColors() {
+  colorContainerEls.forEach((colorContainerEl) => {
+    const newColorCode = randomColor();
+    colorContainerEl.style.backgroundColor = "#" + newColorCode;
+    colorContainerEl.innerText = "#" + newColorCode;
+  });
+}
+
+function randomColor() {
+  const chars = "0123456789abcdef";
+  const colorCodeLength = 6;
+  let colorCode = "";
+  for (let index = 0; index < colorCodeLength; index++) {
+    const randomNum = Math.floor(Math.random() * chars.length);
+    colorCode += chars.substring(randomNum, randomNum + 1);
+  }
+  return colorCode;
+} -->
