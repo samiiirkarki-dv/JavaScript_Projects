@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="newtask">
+        <input type="text" id="input" placeholder="Task to be done.." />
+        <button id="push">Add</button>
+      </div>
+      <div id="tasks"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+<!-- 
+const pushButton = document.querySelector("#push");
+const newTaskInput = document.querySelector("#newtask");
+const tasks = document.querySelector("#tasks");
+const input = document.getElementById("input");
+
+pushButton.onclick = function () {
+  if (input.value.length == 0) {
+    alert("Please Enter a Task");
+  } else {
+    tasks.innerHTML += `
+    <div class="task">
+        <span id="taskname">
+            ${input.value}
+        </span>
+        <button class="delete">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    </div>
+`;
+
+    const current_task = document.querySelectorAll(".delete");
+    for (i = 0; i < current_task.length; i++) {
+      current_task[i].onclick = function () {
+        this.parentNode.remove();
+      };
+    }
+
+    const task = document.querySelectorAll(".task");
+    for (i = 0; i < task.length; i++) {
+      task[i].onclick = function () {
+        this.classList.toggle("completed");
+      };
+    }
+
+    input.value = '';
+  }
+};
+
+-->
+
